@@ -12,4 +12,4 @@ Use guide:
 
   + chạy file A.I_Classification.py trên python 3.6 hoặc hơn, bằng cách sử dụng các công cụ lập trình như: Pycharm, syper, jupyter,...
   + Nói 1 câu liên quan đến chào hỏi hoặc hỏi thời tiết
-  + để kết thúc, hãy nói kết thúc.
+  + để kết thúc, hãy nói "kết thúc".
