@@ -6,7 +6,7 @@ module file: module_AI.py
 Data train: data_train.csv
 
 Use guide:
-  + volumn up. 
+  + volume up. 
   + run file A.I_Classification.py on python >= 3.6 on Programming tool: Pycharm, sypder, jupyter,...
   + speak something relate to greeking or asking weather
   + for ending, please speak "kết thúc".
