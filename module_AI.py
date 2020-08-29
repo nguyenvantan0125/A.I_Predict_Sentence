@@ -44,7 +44,7 @@ class processing():
         os.remove("sound.mp3")
     @classmethod
     def end(cls):
-        cls.speak("cảm ơn")
+        cls.speak("cảm ơn, hẹn gặp lại")
     @classmethod
     def reply(cls,pipeline,user_speech):
         print("User: " + user_speech)

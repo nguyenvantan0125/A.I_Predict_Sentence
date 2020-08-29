@@ -6,7 +6,7 @@
   + Để kết thúc, hãy nói "kết thúc".
 """
 """
-  + volume up speaker  
+  + volume up  
   + speak something relate to greeking or asking weather
   + for ending, please speak "kết thúc".
 """
