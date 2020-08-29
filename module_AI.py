@@ -1,9 +1,7 @@
 from pyvi import ViTokenizer
-import pyttsx3
 import gtts
 import playsound
 import os
-import time
 import speech_recognition as sr
 import pandas as pd
 from sklearn.svm import SVC
@@ -35,7 +33,8 @@ def pipeline_multinomialNB():
 
 class processing():
     def __init__(self):
-        self.AI_ear = sr.Recognizer()    
+        self.AI_ear = sr.Recognizer()
+    @staticmethod
     def speak(text):
         print("A.I predict: {}".format(text))
         tts = gtts.gTTS(text = text, lang='vi', slow=False)
@@ -66,11 +65,34 @@ class interface(processing):
                 user_speech = self.AI_ear.recognize_google(audio_data,language="vi-VN")
             except:
                 user_speech = ""
-            if 'kết' in user_speech:
+                
+            if  user_speech == "":
+                super().speak("mời bạn nói lại")
+            elif "kết" in user_speech:
                 super().end()
                 break
             else:
-                super().reply(self.p_l,user_speech)
-
+                super().reply(self.p_l, user_speech)
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
     
 
