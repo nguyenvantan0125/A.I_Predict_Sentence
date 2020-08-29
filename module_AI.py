@@ -48,7 +48,7 @@ class processing():
     def reply(cls,pipeline,user_speech):
         print("User: " + user_speech)
         data_test = [user_speech]
-        data_test = vi_tokenizer(data_test) # tách từ tiếng việt
+        data_test = vi_tokenizer(data_test) # tokenizer tách từ tiếng việt
         pred = pipeline.predict(data_test) # predict = pipile
         cls.speak(*pred)
         
