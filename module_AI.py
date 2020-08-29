@@ -10,13 +10,14 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
 def readcsv(filename, header = None):
-    a = pd.read_csv(filename, header = header)
+    a = pd.read_csv(filename, header = header,na_values="nan")
+    a = a.dropna()
     return a
 
 def vi_tokenizer(corpus):
-            for idx, txt in enumerate(corpus):
-                corpus[idx] = ViTokenizer.tokenize(txt)
-            return corpus
+    for idx, txt in enumerate(corpus):
+        corpus[idx] = ViTokenizer.tokenize(txt)
+    return corpus
 
 def pipeline_svc():
     p_l = Pipeline([

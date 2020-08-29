@@ -1,3 +1,16 @@
+
+
+"""
+  + Mở volume loa 
+  + Nói 1 câu liên quan đến chào hỏi hoặc hỏi thời tiết.
+  + Để kết thúc, hãy nói "kết thúc".
+"""
+"""
+  + volume up speaker  
+  + speak something relate to greeking or asking weather
+  + for ending, please speak "kết thúc".
+"""
+
     # import module 
 import module_AI as ai
 
