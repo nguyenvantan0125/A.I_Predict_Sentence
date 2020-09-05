@@ -42,16 +42,16 @@ class processing():
         tts.save("sound.mp3")
         playsound.playsound("sound.mp3", False)
         os.remove("sound.mp3")
-    @classmethod
-    def end(cls):
-        cls.speak("cảm ơn, hẹn gặp lại")
-    @classmethod
-    def reply(cls,pipeline,user_speech):
+    
+    def end(self):
+        self.speak("cảm ơn, hẹn gặp lại")
+    
+    def reply(self,pipeline,user_speech):
         print("User: " + user_speech)
         data_test = [user_speech]
         data_test = vi_tokenizer(data_test) # tokenizer tách từ tiếng việt
         pred = pipeline.predict(data_test) # predict = pipile
-        cls.speak(*pred)
+        self.speak(*pred)
         
 class interface(processing):
     def __init__(self,pipeline):
@@ -61,7 +61,7 @@ class interface(processing):
         while True:   
             with sr.Microphone() as source:
                 print("Listning...")
-                audio_data = self.AI_ear.record(source, duration=4) # duartion số giây       
+                audio_data = self.AI_ear.record(source, duration=3) # duartion số giây       
             try:
                 user_speech = self.AI_ear.recognize_google(audio_data,language="vi-VN")
             except:
