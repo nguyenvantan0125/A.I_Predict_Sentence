@@ -34,7 +34,7 @@ def pipeline_multinomialNB():
 
 class processing():
     def __init__(self):
-        self.AI_ear = sr.Recognizer()
+        pass
     @staticmethod
     def speak(text):
         print("A.I predict: {}".format(text))
@@ -42,7 +42,7 @@ class processing():
         tts.save("sound.mp3")
         playsound.playsound("sound.mp3", False)
         os.remove("sound.mp3")
-    
+        
     def end(self):
         self.speak("cảm ơn, hẹn gặp lại")
     
